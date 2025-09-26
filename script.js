@@ -13,5 +13,4 @@ function multiplyArray(arr, multiplier) {
   return arr.map(num => num * multiplier);
 }
 let numbers = [1, 2, 3, 4];
-//console.log(multiplyArray(numbers, 2)); // [2,4,6,8]
-
+console.log(multiplyArray(numbers, 2)); // [2,4,6,8]

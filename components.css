@@ -3,6 +3,14 @@ button:hover, a:hover { transform: translateY(-2px); }
 
 header {
   background-color: #b9deff; color: rgba(255, 255, 255, 0.479); padding: 12px 20px;
-  display: flex; justify-content: center; align-items: center;
+  display: flex; justify-content: start; align-items: start;
 }
 
+[type="bg"] {
+  background-color: #58004998; color: white; border: none;
+  padding: 10px 16px; border-radius: 6px; cursor: pointer;
+}
+
+a {
+ align-items: center; display: inline-flex; font-weight: bold;
+}

@@ -3,6 +3,7 @@
 <head>
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="components.css">
+
       <style>
             ul {
                   background-color: #f0f0f0;
@@ -13,12 +14,35 @@
                   margin-bottom: 10px;
             }
       </style>
+
+      <button onclick="askName()">Kérdezd meg a nevét</button>
+      <p id="name"></p>
+      <script>
+      function askName() {
+        let name = prompt('Mi a neved?');
+        document.getElementById('name').innerText = 'Üdvözöllek, ' + name + '!';
+      }
+      </script>
+
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Portfolio</title>
       <h1>Welcome to my portfolio!</h1>
       <header>
         <nav>
+            <button onclick="changeBg()">Háttér váltás</button>
+<script>
+function changeBg() {
+  document.body.style.backgroundColor = 'lightcoral';
+}
+</script>
+<script>
+window.onload = function() {
+  setTimeout(function() {
+    alert('Üdvözöllek az oldalon!');
+  }, 5000);
+}
+</script>
           <a href="#home">Home</a>
           <a href="#about">About Me</a>
           <a href="#skills">Skills</a>
@@ -58,20 +82,63 @@
       width="560" height="315" src="https://www.youtube.com/watch?v=salY_Sm6mv4&pp=ygULaHRtbCBiYXNpY3PSBwkJ6wkBhyohjO8%3D">
       </iframe>
       <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required placeholder="Your name">
             <br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder="Your email">
             <br><br>
-            <label for="message">Message:</label>
-            <br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+            <textarea id="message" name="message" rows="4" cols="50" required placeholder="Your message"></textarea>
             <br><br>
             <button type="submit" value="Submit">Submit</button>
+            <p></p>
       </form>
 </head>
 <body>
-      
+      <h1>JavaScript Section</h1>
+      <button onclick="incrementCounter()">Növelés</button>
+      <p id="counter">0</p>
+      <script>
+      let count = 0;
+      function incrementCounter() {
+        count++;
+        document.getElementById('counter').innerText = count;
+      }
+      </script>
+      <button onclick="startCountdown()">Indítsd el</button>
+      <p id="countdown">10</p>
+      <script>
+      function startCountdown() {
+        let timeLeft = 10;
+        let timer = setInterval(function() {
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            document.getElementById('countdown').innerText = 'Idő lejárt!';
+          } else {
+                  document.getElementById('countdown').innerText = timeLeft;
+          }
+          timeLeft--;
+        }, 1000);
+      }
+      </script>
+
+      <ul id="fruitList"></ul>
+
+      <script>
+      let fruits = ['Alma', 'Banán', 'Narancs'];
+      fruits.forEach(function(fruit) {
+        document.getElementById('fruitList').innerHTML += '<li>' + fruit + '</li>';
+      });      
+      </script>
+
+      <ul id="personInfo"></ul>
+
+      <script>
+      let person = { name: 'John', age: 30, city: 'Budapest' };
+      for (let key in person) {
+        document.getElementById('personInfo').innerHTML +=
+       '<li>' + key + ': ' + person[key] + '</li>';
+      }
+</script>
+
+
 </body>
 </html>

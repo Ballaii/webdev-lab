@@ -1,0 +1,8 @@
+a, button { transition: background-color 0.2s, color 0.2s, transform 0.2s; }
+button:hover, a:hover { transform: translateY(-2px); }
+
+header {
+  background-color: #b9deff; color: rgba(255, 255, 255, 0.479); padding: 12px 20px;
+  display: flex; justify-content: center; align-items: center;
+}
+

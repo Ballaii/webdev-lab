@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="components.css">
+      <style>
+            ul {
+                  background-color: #f0f0f0;
+                  padding: 30px;
+                  margin-top: 10px;
+            }
+            li {
+                  margin-bottom: 10px;
+            }
+      </style>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Portfolio</title>
@@ -38,9 +50,9 @@
       </aside>
       <figure>
         <img src="src/img/1.png" alt="A description of the image" width="150">
-        <figcaption>Windows cat</figcaption>
+        <figcaption style="color:blue;">Windows cat</figcaption>
         <img src="src/img/2.png" alt="A description of the image" width="150">
-        <figcaption>Dinosaur</figcaption>
+        <figcaption style="color: brown;">Dinosaur</figcaption>
       </figure>
       <iframe
       width="560" height="315" src="https://www.youtube.com/watch?v=salY_Sm6mv4&pp=ygULaHRtbCBiYXNpY3PSBwkJ6wkBhyohjO8%3D">
@@ -56,7 +68,7 @@
             <br>
             <textarea id="message" name="message" rows="4" cols="50" required></textarea>
             <br><br>
-            <input type="submit" value="Submit">
+            <button type="submit" value="Submit">Submit</button>
       </form>
 </head>
 <body>

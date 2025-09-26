@@ -15,12 +15,12 @@
             }
       </style>
 
-      <button onclick="askName()">Kérdezd meg a nevét</button>
+      <button onclick="askName()">What is your name?</button>
       <p id="name"></p>
       <script>
       function askName() {
-        let name = prompt('Mi a neved?');
-        document.getElementById('name').innerText = 'Üdvözöllek, ' + name + '!';
+        let name = prompt('What is your name?');
+        document.getElementById('name').innerText = 'Welcome, ' + name + '!';
       }
       </script>
 
@@ -30,16 +30,24 @@
       <h1>Welcome to my portfolio!</h1>
       <header>
         <nav>
-            <button onclick="changeBg()" type="bg">Háttér váltás</button>
+            <button onclick="changeBg()" type="bg">Change Background</button>
 <script>
 function changeBg() {
-  document.body.style.backgroundColor = 'lightcoral';
+      function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+  document.body.style.backgroundColor = getRandomColor();
 }
 </script>
 <script>
 window.onload = function() {
   setTimeout(function() {
-    alert('Üdvözöllek az oldalon!');
+    alert('Welcome to the site!');
   }, 5000);
 }
 </script>
@@ -95,7 +103,7 @@ window.onload = function() {
 </head>
 <body>
       <h1>JavaScript Section</h1>
-      <button onclick="incrementCounter()">Növelés</button>
+      <button onclick="incrementCounter()">Increase counter</button>
       <p id="counter">0</p>
       <script>
       let count = 0;
@@ -104,7 +112,7 @@ window.onload = function() {
         document.getElementById('counter').innerText = count;
       }
       </script>
-      <button onclick="startCountdown()">Indítsd el</button>
+      <button onclick="startCountdown()">Start Countdown</button>
       <p id="countdown">10</p>
       <script>
       function startCountdown() {
@@ -124,7 +132,7 @@ window.onload = function() {
       <ul id="fruitList"></ul>
 
       <script>
-      let fruits = ['Alma', 'Banán', 'Narancs'];
+      let fruits = ['Apple', 'Banana', 'Orange'];
       fruits.forEach(function(fruit) {
         document.getElementById('fruitList').innerHTML += '<li>' + fruit + '</li>';
       });      
@@ -133,7 +141,7 @@ window.onload = function() {
       <ul id="personInfo"></ul>
 
       <script>
-      let person = { name: 'John', age: 30, city: 'Budapest' };
+      let person = { name: 'John', age: 30, city: 'London' };
       for (let key in person) {
         document.getElementById('personInfo').innerHTML +=
        '<li>' + key + ': ' + person[key] + '</li>';

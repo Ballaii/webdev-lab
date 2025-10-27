@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Ballai - Portfólió / CV</title>
+      <meta name="color-scheme" content="dark">
+      <link rel="stylesheet" href="style.css">
+      <meta name="description" content="Ballai Fokt Jeno portfólió / CV oldala">
+      <link rel="icon" type="image/png" href="character.png">
+      <head>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ldk8PgrAAAAABVg0g-4LXISEMD5JZGMdNCAYrBQ"></script>
+            
+</head>
+<body>
+<main id="app">
+<section class="profile-card">
+<img class="avatar" src="en.jpeg" alt="pfp">
+<div class="meta">
+<h1 class="name">Ballai Fokt Jeno</h1>
+<p class="role" data-i18n="Student">Student</p>
+
+<div id="translation-warning" style="position: fixed; bottom: 10px; width: 100%; text-align: center; font-size: 0.9em; color: #ccc;">
+</div>
+
+<div class="links">
+      <a href="mailto:ballaifoktjeno@gmail.com" target="_blank" rel="noopener">Email</a> ·
+      <a href="https://www.linkedin.com/in/jen%C5%91-ballai-fokt-203928316/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://github.com/Ballaii" target="_blank" rel="noopener">GitHub</a>
+</div>
+</div>
+</section>
+<section class="card">
+<h2 data-i18n="Introduction">Introduction</h2>
+<p data-i18n="intro">
+I like to learn new things that improve my skills, nowadays game development caught my attention, but I also like web development. I am a quick learner and a team player.
+</p>
+</section>
+
+<section class="card">
+<h2 data-i18n="Experience">Experience</h2>
+      <div class="job">
+      <div class="job-title" data-i18n="Automation Developer Intern">Automation Developer Intern</div>
+            <div class="job-company" data-i18n="Accenture - 2025 Summer">Accenture - 2025 Summer</div>
+            <ul>
+            <li data-i18n="Home automation development">Home automation development</li>
+            <li data-i18n="Participation in team work in an agile environment">Participation in team work in an agile environment</li>
+            <li data-i18n="HVAC simulation development">HVAC simulation development</li>
+      </ul>
+      </div>
+      <div class="job">
+      <div class="job-title" data-i18n="Community manager">Community manager</div>
+      <div class="job-company" data-i18n="Server management, Community moderation - 2018-2022">Server management, Community moderation - 2018-2022</div>
+                  <ul>
+                  <li data-i18n="Assigning tasks for team members">Assigning tasks for team members</li>
+                  <li data-i18n="Aiding in community engagement and support">Aiding in community engagement and support</li>
+                  <li data-i18n="Managing and moderating online communities">Managing and moderating online communities</li>
+                  <li data-i18n="Organizing events and activities to foster community interaction">Organizing events and activities to foster community interaction</li>
+                  <li data-i18n="Handling conflict resolution and ensuring a positive community environment">Handling conflict resolution and ensuring a positive community environment</li>
+                  </ul>
+            </div>
+      </section>
+
+      <section class="card">
+            <h2 data-i18n="Education">Education</h2>
+            <ul>
+            <li><strong data-i18n="Information Technology">Information Technology</strong> – UMFST, 2023–2026</li>
+            <li><strong data-i18n="High School Diploma">High School Diploma</strong> – Kemeny Janos Elmeleti Liceum, 2019-2023</li>
+      </ul>
+</section>
+
+      <section class="card">
+      <h2 data-i18n="Skills">Skills</h2>
+      <ul class="skills-list">
+      <li class="chip">C++</li>
+      <li class="chip">.NET</li>
+      <li class="chip">Unity</li>
+      <li class="chip">Python</li>
+      <li class="chip">Java</li>
+      <li class="chip">Git</li>
+      <li class="chip">Flutter</li>
+</ul>
+</section>
+
+<section class="card">
+<h2 data-i18n="Hobbies & Certificates">Hobbies & Certificates</h2>
+<div class="carousel">
+    <div class="carousel-item" data-i18n="Game Development">🎮 Game Development</div>
+    <div class="carousel-item" data-i18n="Web Development">💻 Web Development</div>
+    <div class="carousel-item" data-i18n="Exercising">🏃‍♂️ Exercising</div>
+</div>
+</section>
+
+<style>
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid #444;
+    border-radius: 10px;
+}
+.carousel-item {
+    min-width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    transition: transform 0.5s ease;
+}
+</style>
+
+<script>
+let carouselIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+
+setInterval(() => {
+    carouselIndex = (carouselIndex + 1) % items.length;
+    items.forEach((item, i) => {
+        item.style.transform = `translateX(-${carouselIndex * 100}%)`;
+    });
+}, 3000);
+</script>
+
+
+<section class="card contact-card">
+<h2 data-i18n="Contact Form">Contact Form</h2>
+<form id="contact-form">
+      <div class="form-group">
+          <label for="name" data-i18n="namef">Name:</label>
+          <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+          <label for="message" data-i18n="Message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button class="g-recaptcha"
+          data-sitekey="SAJAT_SITE_KEY"
+          data-callback="onSubmit"
+          data-action="submit">Submit</button>
+</form>
+</section>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+function onSubmit(token) {
+    document.getElementById("contact-form").submit();
+}
+</script>
+
+
+
+<script>
+const translations = {
+    "en": {
+        "Introduction": "Introduction",
+        "Experience": "Experience",
+        "Education": "Education",
+        "Skills": "Skills",
+        "Hobbies & Certificates": "Hobbies & Certificates",
+        "machine_warning": "Note: Machine translation applied",
+        "Message": "Message",
+        "Student": "Student",
+        "intro": "I like to learn new things that improve my skills, nowadays game development caught my attention, but I also like web development. I am a quick learner and a team player.",
+        "Automation Developer Intern": "Automation Developer Intern",
+            "Accenture - 2025 Summer": "Accenture - 2025 Summer",
+            "Home automation development": "Home automation development",
+            "Participation in team work in an agile environment": "Participation in team work in an agile environment",
+            "HVAC simulation development": "HVAC simulation development",
+            "Community manager": "Community manager",
+            "Server management, Community moderation - 2018-2022": "Server management, Community moderation - 2018-2022",
+                  "Assigning tasks for team members": "Assigning tasks for team members",
+                  "Aiding in community engagement and support": "Aiding in community engagement and support",
+                  "Managing and moderating online communities": "Managing and moderating online communities",
+                  "Organizing events and activities to foster community interaction": "Organizing events and activities to foster community interaction",
+                  "Handling conflict resolution and ensuring a positive community environment": "Handling conflict resolution and ensuring a positive community environment",
+            "Information Technology": "Information Technology",
+            "High School Diploma": "High School Diploma",
+            "Game Development": "🎮 Game Development",
+            "Web Development": "💻 Web Development",
+            "Exercising": "🏃‍♂️ Exercising",
+            "submit": "Submit",
+            "namef": "Name",
+            "Contact Form": "Contact Form"
+    },
+    "hu": {
+        "Introduction": "Bemutatkozás",
+        "Experience": "Tapasztalat",
+        "Education": "Oktatás",
+        "Skills": "Készségek",
+        "Hobbies & Certificates": "Hobbi és Tanúsítványok",
+        "machine_warning": "Figyelem: gépi fordítást alkalmaztunk",
+        "Message": "Üzenet",
+            "Student": "Diák",
+            "intro": "Szeretek új dolgokat tanulni, amelyek fejlesztik a képességeimet, manapság a játékfejlesztés keltette fel az érdeklődésemet, de a webfejlesztést is szeretem. Gyorsan tanulok és csapatjátékos vagyok.",
+            "Automation Developer Intern": "Automatizálási Fejlesztő Gyakornok",
+            "Accenture - 2025 Summer": "Accenture - 2025 Nyár",
+            "Home automation development": "Otthoni automatizálás fejlesztése",
+            "Participation in team work in an agile environment": "Részvétel csapatmunkában agilis környezetben",
+            "HVAC simulation development": "HVAC szimuláció fejlesztése",
+            "Community manager": "Közösségi menedzser",
+            "Server management, Community moderation - 2018-2022": "Szerverkezelés, Közösségi moderáció - 2018-2022",
+                  "Assigning tasks for team members": "Feladatok kiosztása a csapattagoknak",
+                  "Aiding in community engagement and support": "Segítségnyújtás a közösségi részvételben és támogatásban",
+                  "Managing and moderating online communities": "Online közösségek kezelése és moderálása",
+                  "Organizing events and activities to foster community interaction": "Események és tevékenységek szervezése a közösségi interakció elősegítésére",
+                  "Handling conflict resolution and ensuring a positive community environment": "Konfliktuskezelés és pozitív közösségi környezet biztosítása",   
+            "Information Technology": "Informatika",
+            "High School Diploma": "Érettségi",
+            "Game Development": "🎮 Játékfejlesztés",
+            "Web Development": "💻 Webfejlesztés",
+            "Exercising": "🏃‍♂️ Edzés",
+            "submit": "Küldés",
+            "namef": "Név",
+            "Contact Form": "Kapcsolatfelvétel"
+    }
+};
+
+function translatePage() {
+    const lang = navigator.language.startsWith('hu') ? 'hu' : 'en';
+    
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+    }
+});
+
+
+    const warningEl = document.getElementById('translation-warning');
+    if (warningEl) {
+        warningEl.textContent = translations[lang]["machine_warning"];
+    }
+}
+
+translatePage();
+
+</script>
+
+</main>
+</body>
+</html>

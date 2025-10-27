@@ -1,0 +1,165 @@
+body{background:#0b0f14;color:#e6e9ef;font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial;margin:0;padding:24px}
+.avatar{width: 128px; height: 128px; object-fit: cover; border-radius: 50%; max-width: 100%; height: auto;}
+
+.profile-card{display:flex;gap:18px;align-items:center;background:#11161d;border:1px solid #1f2937;border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.profile-card .avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid #1f2937}
+.profile-card .name{margin:0;font-size:28px}
+.profile-card .role{margin:4px 0 8px;color:#9aa4b2}
+.profile-card .links a{color:#e6e9ef;text-decoration:none}
+.profile-card .links a:hover{text-decoration:underline}
+
+main {
+      max-width: 700px;
+      margin: 32px auto;
+      padding: 16px;
+}
+.profile-card, .card {
+      background: #23272a;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px #0004;
+}
+.avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border: 3px solid #444;
+}
+.meta {
+      margin-left: 0;
+}
+.name {
+      margin: 0 0 8px 0;
+}
+.role {
+      margin: 0 0 12px 0;
+      color: #aaa;
+}
+.links a {
+      color: #7ecfff;
+      text-decoration: none;
+      margin-right: 8px;
+}
+.links a:last-child {
+      margin-right: 0;
+}
+.card h2 {
+      margin-top: 0;
+}
+.experience-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+}
+.job {
+      margin-bottom: 18px;
+}
+.job-title {
+      font-weight: bold;
+      margin-bottom: 2px;
+}
+.job-company {
+      color: #aaa;
+      font-size: 0.98em;
+      margin-bottom: 4px;
+}
+.job ul {
+      margin: 0 0 0 18px;
+      padding: 0;
+      list-style: disc;
+}
+.skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+}
+.chip {
+      background: #31363b;
+      color: #7ecfff;
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 0.98em;
+      display: inline-block;
+}
+.contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+}
+.contact-list li {
+      margin-bottom: 6px;
+}
+@media (max-width: 600px) {
+      main { padding: 4px; }
+      .profile-card, .card { padding: 12px; }
+      .avatar { width: 72px; height: 72px; }
+}
+.contact-card {
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-card h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-card label {
+    color: #ccc;
+    font-size: 0.95em;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card input,
+.contact-card textarea {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 0.95em;
+    transition: border 0.3s, background 0.3s;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+    border: 1px solid #66f;
+    background-color: #333;
+    outline: none;
+}
+
+.contact-card button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
